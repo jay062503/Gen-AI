@@ -1,0 +1,18 @@
+services:
+  media-studio:
+    build:
+      context: .
+      args:
+        INSTALL_ML: "0"          # set to "1" on an NVIDIA host
+    ports:
+      - "127.0.0.1:8090:8090"
+    environment:
+      MEDIA_API_TOKEN: ${MEDIA_API_TOKEN:?set MEDIA_API_TOKEN in your shell or a .env file}
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    # NVIDIA GPU (uncomment on a CUDA host):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices: [{driver: nvidia, count: all, capabilities: [gpu]}]

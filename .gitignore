@@ -1,0 +1,41 @@
+﻿# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Model weights, caches and generated media
+data/*
+!data/.gitkeep
+tmp_openvino_edit_test/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.xml
+*.bin
+
+# Local generated outputs and logs
+outputs/
+logs/
+*.log
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local test artifacts
+openvino_test.png
+data/

@@ -1,0 +1,4 @@
+# Only for the experimental LTX-2.5 22B backend (MEDIA_VIDEO_BACKEND=ltx-2.5). Needs git installed.
+# LTX-2.5 support was not in a diffusers release when this package was prepared; check first:
+#   pip install -U diffusers   (if LTX2 pipelines import fine, you do not need this file)
+diffusers @ git+https://github.com/huggingface/diffusers.git
